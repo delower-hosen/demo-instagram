@@ -1,0 +1,17 @@
+.navText{
+    padding: 12px 56px 12px 56px;
+    font-style: bold;
+    font-size: 18px;
+    font-weight: 400;
+    &:hover{
+       background-color: rgb(235, 230, 230);
+       cursor: pointer; 
+    }
+    color: dimgrey;
+}
+
+.activeTab {
+    background-color: rgb(209, 205, 205);
+    cursor: pointer; 
+    color: black;
+}

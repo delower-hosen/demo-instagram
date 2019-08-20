@@ -1,0 +1,15 @@
+
+<div class="navbar" fxLayout="column">
+  <div class="navText" [ngClass]="{'activeTab': (this.selectedTab=='dashboard')}" (click)="selectTab('dashboard')">
+    <span>
+        <a  color="primary" >Profile</a>
+    </span>
+  </div>
+
+  <div class="navText" [ngClass]="{'activeTab': (selectedTab=='management')}" (click)="selectTab('management')">
+    <span>
+      <a  color="primary" >News Feed</a>
+    </span>
+  </div>
+  
+</div>

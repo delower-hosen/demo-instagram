@@ -1,0 +1,29 @@
+.mat-drawer-container {
+    height: 90%;
+  }
+  
+  mat-icon {
+    cursor: pointer;
+  }
+  
+  .title {
+    padding: 15px;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+  
+  .profile{
+      background: #3F51B5 !important;
+      color: white;
+      cursor: pointer;
+      font-size: 8px;
+      &:hover{
+          background: rgb(77, 95, 201) !important;
+      }
+      mat-icon{
+          padding-top: 5px;
+      }
+  }
+  
