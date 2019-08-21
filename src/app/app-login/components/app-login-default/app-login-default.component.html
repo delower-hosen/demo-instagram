@@ -1,16 +1,29 @@
-<p>
-  app-login-default works!
-</p>
-<div flexLayout="row">
-  <div>
-    <p> one </p>
+<div fxFlex="100" class="loginPage" fxFlexAlign="start" fxLayout="row">
+  <div fxFlex="75" class="coverphoto">
+   <img class="bg" src="{{coverPhoto}}" alt="ffff">
   </div>
-  <div>
-    <p> two </p>
-  </div>
-  <div>
-    <p> 
-      three
-    </p>
-  </div>
-</div>
+  
+   <div fxFlex="25" class="card" fxFlexAlign="start">
+      <mat-card>
+          <div fxLayout="row" class="mb-20 nav">
+            <mat-tab-group (selectedTabChange)="updateSelectedMenu($event)" [selectedIndex]="selectedMenuIndex"> 
+              <mat-tab label="Login"></mat-tab>
+              <mat-tab label="Registration"></mat-tab>
+            </mat-tab-group>
+          </div> 
+    
+          <div class="log" *ngIf="selectedMenuIndex==0">
+            <app-login></app-login>
+            <div class="noAccount" fxLayout="row wrap" fxLayoutAlign="space-around center">
+              <p>Don't have an account?<a (click)="updateSelectedIndex(1)">Register Now!</a></p>
+            </div>
+          </div>
+          <div class="log" *ngIf="selectedMenuIndex==1">
+            <app-registration></app-registration>
+            <div class="noAccount" fxLayout="row wrap" fxLayoutAlign="space-around center">
+                <p>Already have an account?<a (click)="updateSelectedIndex(0)">Login Now!</a></p>
+            </div>
+          </div>
+        </mat-card>
+   </div>
+ </div>
